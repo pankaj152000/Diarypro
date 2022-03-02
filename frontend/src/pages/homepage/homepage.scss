@@ -1,0 +1,24 @@
+.homepage{
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+h1{
+    font-size:7em;
+}
+.buttons{
+    margin-top: 150px;
+    padding: 50px;
+    padding-bottom: 200px;
+}
+.bu{
+    font-size: 5em;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: whitesmoke;
+    min-width: 270px;
+
+    &:hover{
+        background-color: rgb(95, 95, 95) ;
+    }
+}
