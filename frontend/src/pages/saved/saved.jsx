@@ -6,9 +6,9 @@ const savedPage=({Data})=>{
     console.log(Data);
     return(
     <div className="saved">
-    <h1>saved</h1>
+    
     {
-        Data.map((data)=>(data.map(({date,head,text})=>(<SavedComponent date={date} head={head} text={text}/>))))
+        Data.map((data)=>(data.map(({date,head,text})=><SavedComponent date={date} head={head} text={text}/>)))
     }
     </div>
     );

@@ -1,4 +1,6 @@
 import React from "react";
+import Savedbutton from "../../component/savedButton/savedbutton";
+
 import "./diarypage.scss";
 import Reduxsave from "./reduxsave";
 
@@ -10,21 +12,19 @@ class DiaryPage extends React.Component {
       head: "",
       text: "",
       data: [],
-      okay: 0
+      okay: 0,
     };
   }
 
   handlevent = (e) => {
-      e.preventDefault();
+    e.preventDefault();
     const obj = {
       date: this.state.date,
       head: this.state.head,
       text: this.state.text,
     };
     this.setState({ data: [obj] });
-    this.setState({okay:1})
-   
-   
+    this.setState({ okay: 1 });
   };
 
   render() {
@@ -32,8 +32,9 @@ class DiaryPage extends React.Component {
     return (
       <div className="diarypage">
         <div className="butt">
-          <button className="but" onClick={(e)=>this.handlevent(e)}>
-            <h2>ADD</h2>
+          <Savedbutton></Savedbutton>
+          <button className="but" onClick={(e) => this.handlevent(e)}>
+            ADD
           </button>
         </div>
         <div className="top">
@@ -62,10 +63,14 @@ class DiaryPage extends React.Component {
             onChange={(e) => this.setState({ text: e.target.value })}
           ></textarea>
         </div>
-        {
-          (this.state.okay)?<div> <Reduxsave data={this.state.data}></Reduxsave></div> :<div/>
-        }
-      
+        {this.state.okay ? (
+          <div>
+            
+            <Reduxsave data={this.state.data}></Reduxsave>
+          </div>
+        ) : (
+          <div />
+        )}
       </div>
     );
   }

@@ -1,0 +1,11 @@
+.bu{
+    min-width: 120px;
+    min-height: 30px;
+    font-size: large;
+    text-decoration: solid;
+    border: solid 2px;
+
+    &:hover{
+        background-color: rgb(126, 125, 125)
+    }
+}

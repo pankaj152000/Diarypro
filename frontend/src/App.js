@@ -7,7 +7,7 @@ import SavedPage from "./pages/saved/saved";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
       <Routes>
       <Route path="/" element={<Homepage/>}></Route>
       <Route path="/diarypage" element={<DiaryPage/>}></Route>
